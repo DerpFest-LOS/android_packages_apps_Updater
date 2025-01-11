@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2017-2022 The LineageOS Project
+ * SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 package org.lineageos.updater.controller;
@@ -518,7 +518,7 @@ public class UpdaterController {
     }
 
     public boolean isVerifyingUpdate() {
-        return mVerifyingUpdates.size() > 0;
+        return !mVerifyingUpdates.isEmpty();
     }
 
     public boolean isVerifyingUpdate(String downloadId) {

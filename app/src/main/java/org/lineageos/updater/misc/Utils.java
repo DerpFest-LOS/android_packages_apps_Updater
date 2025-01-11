@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2017-2023 The LineageOS Project
+ * SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 package org.lineageos.updater.misc;
@@ -54,17 +54,6 @@ public class Utils {
 
     public static File getDownloadPath(Context context) {
         return new File(context.getString(R.string.download_path));
-    }
-
-    public static File getExportPath(Context context) {
-        File dir = new File(context.getExternalFilesDir(null),
-                context.getString(R.string.export_path));
-        if (!dir.isDirectory()) {
-            if (dir.exists() || !dir.mkdirs()) {
-                throw new RuntimeException("Could not create directory");
-            }
-        }
-        return dir;
     }
 
     public static File getCachedUpdateList(Context context) {
@@ -303,10 +292,11 @@ public class Utils {
         }
 
         // Ideally the database is empty when we get here
-        UpdatesDbHelper dbHelper = new UpdatesDbHelper(context);
         List<String> knownPaths = new ArrayList<>();
-        for (UpdateInfo update : dbHelper.getUpdates()) {
-            knownPaths.add(update.getFile().getAbsolutePath());
+        try (UpdatesDbHelper dbHelper = new UpdatesDbHelper(context)) {
+            for (UpdateInfo update : dbHelper.getUpdates()) {
+                knownPaths.add(update.getFile().getAbsolutePath());
+            }
         }
         for (File file : files) {
             if (!knownPaths.contains(file.getAbsolutePath())) {

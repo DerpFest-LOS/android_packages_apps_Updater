@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2017-2022 The LineageOS Project
+ * SPDX-FileCopyrightText: 2017-2025 The LineageOS Project
  * SPDX-FileCopyrightText: 2020-2022 SHIFT GmbH
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -12,13 +12,10 @@ import android.net.Uri;
 import android.os.ParcelFileDescriptor;
 import android.util.Log;
 
-import org.json.JSONException;
 import org.lineageos.updater.controller.UpdaterController;
-import org.lineageos.updater.controller.UpdaterService;
 import org.lineageos.updater.misc.StringGenerator;
 import org.lineageos.updater.misc.Utils;
 import org.lineageos.updater.model.Update;
-import org.lineageos.updater.model.UpdateInfo;
 import org.lineageos.updater.model.UpdateStatus;
 
 import java.io.File;
@@ -29,7 +26,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.text.DateFormat;
-import java.util.List;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
