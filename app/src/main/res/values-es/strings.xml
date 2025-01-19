@@ -120,7 +120,7 @@
     <string name="ongoing_channel_title">Descargas en curso</string>
     <string name="update_failed_channel_title">Se produjo un error en la actualización</string>
     <string name="info_dialog_title">¿Sabías que...</string>
-    <string name="info_dialog_message">Las actualizaciones de LineageOS son paquetes de instalación completos, lo que significa que siempre puedes instalar la última actualización, ¡incluso si has saltado algunas de las intermedias!</string>
+    <string name="info_dialog_message">Las actualizaciones de DerpFest son paquetes de instalación completos, lo que significa que siempre puedes instalar la última actualización, ¡incluso si has saltado algunas de las intermedias!</string>
     <string name="info_dialog_ok">¡Gracias por la información!</string>
     <string name="local_update_import">Actualización local</string>
     <string name="local_update_import_progress">Importando actualización local\u2026</string>
