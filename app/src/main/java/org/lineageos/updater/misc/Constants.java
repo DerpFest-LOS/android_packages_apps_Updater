@@ -32,7 +32,7 @@ public final class Constants {
     public static final String PROP_BUILD_VERSION = "ro.derpfest.version";
     public static final String PROP_DEVICE = "ro.derpfest.device";
     public static final String PROP_NEXT_DEVICE = "ro.updater.next_device";
-    public static final String PROP_RELEASE_TYPE = "ro.derpfest.type";
+    public static final String PROP_RELEASE_TYPE = "ro.derpfest.releasetype";
     public static final String PROP_UPDATER_ALLOW_DOWNGRADING = "derpfest.updater.allow_downgrading";
     public static final String PROP_UPDATER_URI = "derpfest.updater.uri";
 
